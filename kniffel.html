@@ -1,0 +1,193 @@
+<!doctype HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="kniffel.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="kniffel.js"></script>
+	</head>
+	<body>
+		<div id="title-bar"> Yahtzee! Roll the Dice!</div>
+		<div id="window">
+			<div id="frame-left">
+				<div class="innerframe-dice-column">
+					<div id="dice-frame">
+						<div class="dice-frame-row">
+							<div id="dice1" class="dice-container">
+								<img src="http://i.imgur.com/LvyhocM.gif" class="dice"/>
+							</div>
+							<div id="dice2" class="dice-container">
+								<img src="http://i.imgur.com/LvyhocM.gif" class="dice"/>
+							</div>
+						</div>
+						<div class="dice-frame-row">
+							<div id="dice3" class="dice-container">
+								<img src="http://i.imgur.com/LvyhocM.gif" class="dice"/>
+							</div>
+						</div>
+						<div class="dice-frame-row">
+							<div id="dice4" class="dice-container">
+								<img src="http://i.imgur.com/LvyhocM.gif" class="dice"/>
+							</div>
+							<div id="dice5" class="dice-container">
+								<img src="http://i.imgur.com/LvyhocM.gif" class="dice"/>
+							</div>
+						</div>
+					</div>
+
+					<div id="roll-button-frame">
+						<div class="roll-button-container">
+							<div id="roll-button-counter-container">
+								<div id="roll-button-counter">3x</div>
+							</div>
+						</div>
+						<div class="roll-button-container">
+							<img id="roll-button" title="Roll the dice" src="http://i.imgur.com/qaOZPnd.png" class="roll-button"/>
+						</div>
+					</div>
+
+				</div>
+				<div class="innerframe-menu-column">
+					<div id="menu-button-newgame" class="menubutton-container">
+						<div>New Game</div>
+					</div>
+					<div class="menubutton-container">
+						<a id="rules-btn" href="https://en.wikipedia.org/wiki/Yahtzee" title="Yahtzee Rules" target="_blank"><div>Rules</div></a>
+					</div>
+					<!-- <div class="menubutton-container">
+						<div>About</div>
+					</div> -->
+				</div>
+				<div class="innerframe-extramenu-column">
+					<div class="menubutton-container">
+						<a href="https://de.linkedin.com/pub/daniel-thomalla/113/b60/a26" title="LinkedIn Profile: Daniel Thomalla" target="_blank" rel="me">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/2000px-LinkedIn_Logo.svg.png" alt="LinkedIn Profile" style="height: 4.5vh; padding:1.2vh; display:block; margin:auto">
+						</a>
+					</div>
+					<div class="menubutton-container">
+						<a href="https://www.xing.com/profile/Daniel_Thomalla" title="XING Profile: Daniel Thomalla"  target="_blank" rel="me">
+							<img src="https://corporate.xing.com/build/images/navigation/logo.svg" alt="XING Profile" style="height: 5vh; padding:0.5vh; display:block; margin:auto">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="frame-right">
+				<div class="innerframe-top-fields">
+					<div class="assign-buttons">
+						<div id="assign-button-ones" class="assign-button">
+							Ones
+						</div>
+						<div id="assign-button-twos" class="assign-button">
+							Twos
+						</div>
+						<div id="assign-button-threes" class="assign-button">
+							Threes
+						</div>
+						<div id="assign-button-fours" class="assign-button">
+							Fours
+						</div>
+						<div id="assign-button-fives" class="assign-button">
+							Fives
+						</div>
+						<div id="assign-button-sixes" class="assign-button">
+							Sixes
+						</div>
+					</div>
+					<div class="assigned-points">
+						<div id="points-field-ones" class="points-field">
+
+						</div>
+						<div id="points-field-twos" class="points-field">
+
+						</div>
+						<div id="points-field-threes" class="points-field">
+
+						</div>
+						<div id="points-field-fours" class="points-field">
+
+						</div>
+						<div id="points-field-fives" class="points-field">
+
+						</div>
+						<div id="points-field-sixes" class="points-field">
+
+						</div>
+					</div>
+					<div class="sum-points">
+						<div class="sum-points-field">
+							<div class="sum-points-field-head">Top Sum</div>
+							<div id="sum-points-top" class="sum-points-field-value"></div>
+						</div>
+						<div class="sum-points-field">
+							<div class="sum-points-field-head">Bonus</br>(Sum >= 63)</div>
+							<div id="sum-points-bonus" class="sum-points-field-value"></div>
+						</div>
+						<div class="sum-points-field">
+							<div class="sum-points-field-head">Top Total</div>
+							<div id="sum-points-top-total" class="sum-points-field-value"></div>
+						</div>
+					</div>
+				</div>
+				<div class="innerframe-bottom-fields">
+					<div class="assign-buttons">
+						<div id="assign-button-threekind" class="assign-button">
+							3 of a kind
+						</div>
+						<div id="assign-button-fourkind" class="assign-button">
+							4 of a kind
+						</div>
+						<div id="assign-button-fullhouse" class="assign-button">
+							Full House
+						</div>
+						<div id="assign-button-smallstr" class="assign-button">
+							S. straight
+						</div>
+						<div id="assign-button-largestr" class="assign-button">
+							L. straight
+						</div>
+						<div id="assign-button-yahtzee" class="assign-button">
+							Yahtzee
+						</div>
+						<div id="assign-button-chance" class="assign-button">
+							Chance
+						</div>
+					</div>
+					<div class="assigned-points">
+						<div id="points-field-threekind" class="points-field">
+
+						</div>
+						<div id="points-field-fourkind" class="points-field">
+
+						</div>
+						<div id="points-field-fullhouse" class="points-field">
+
+						</div>
+						<div id="points-field-smallstr" class="points-field">
+
+						</div>
+						<div id="points-field-largestr" class="points-field">
+
+						</div>
+						<div id="points-field-yahtzee" class="points-field">
+
+						</div>
+						<div id="points-field-chance" class="points-field">
+
+						</div>
+					</div>
+					<div class="sum-points">
+						<div class="sum-points-field">
+							<div class="sum-points-field-head">Bottom Sum</div>
+							<div id="sum-points-bottom" class="sum-points-field-value"></div>
+						</div>
+						<div class="sum-points-field">
+							<div class="sum-points-field-head">Total Points</div>
+							<div id="sum-points-total" class="sum-points-field-value"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>initGame() </script>
+</html>

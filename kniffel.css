@@ -1,0 +1,351 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  user-select: none;
+  background-color: lightgrey;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+#title-bar{
+  font-size: 3.5vh;
+  font-weight: bold;
+  display: flex;
+  background-color: lightblue;
+  justify-content: center;
+  padding: 0.2em;
+  margin: 0.25em 0.25em 0 0.25em;
+  border-radius: 0.5em;
+  border-width: 0.35em;
+  border-color: #002244;
+  border-style: solid;
+  text-shadow: 1px 1px 2px gray;
+}
+
+#window{
+  display: flex;
+  height: 85%;
+  background-color: lightgrey;
+}
+
+#frame-right{
+  display: flex;
+  flex-direction: column;
+  flex:2;
+  background-color: #002244;
+  margin: 0.3em;
+  margin-left: 0;
+  padding: 0.45em;
+  border-radius: 0.8em;
+}
+
+#frame-left{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+  margin: 0.3em;
+  /*background-color: #0000ff;*/
+}
+
+.innerframe-dice-column{
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+  background-color: #002244;
+  border-radius: 0.8em;
+  padding: 0.5em;
+}
+
+.innerframe-top-fields{
+  display: flex;
+  flex-direction: row;
+  flex: 6;
+  background-color: white;
+  /*border: solid 1px black;*/
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+.innerframe-bottom-fields{
+  display: flex;
+  flex-direction: row;
+  flex: 7;
+  background-color: white;
+  /*border: solid 1px black;*/
+  border-radius: 0 0 0.5em 0.5em;
+}
+
+.assign-buttons{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  background-color: gray;
+  border-radius: 0.3em 0 0 0.3em;
+  /*border: solid 1px black;*/
+  margin: 0.3em 0 0.3em 0.3em;
+  padding: 0.1em;
+}
+
+.assign-button{
+  flex:1;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 2.2vh;
+  margin: 0.1em;
+  padding: 0.7em 0.2em 0.2em 0.3em;
+  cursor: pointer;
+  background-color: lightgray;
+  border-radius: 0.2em;
+  text-shadow: 1px 1px 1px gray;
+}
+
+.assign-button:hover{
+  background-color: #cccccc;
+  transform: scale(1.01);
+}
+
+.assign-button-used{
+  cursor: not-allowed;
+  background-color: darkgray !important;
+}
+
+.assigned-points{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: gray;
+  /*border-top: solid 1px black;*/
+  /*border-bottom: solid 1px black;*/
+  margin: 0.3em 0 0.3em 0;
+  padding: 0.1em;
+}
+
+.points-field{
+  flex:1;
+  font-weight: bold;
+  font-size: 2.2vh;
+  text-align: center;
+  margin: 0.1em;
+  padding: 0.6em;
+  background-color: lightgray;
+  border-radius: 0.2em;
+  text-shadow: 1px 1px 1px gray;
+}
+
+.points-field-used{
+  background-color: darkgray;
+}
+
+.sum-points{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  background-color: gray;
+  border-radius: 0 0.3em 0.3em 0;
+  /*border: solid 1px black;*/
+  margin: 0.3em 0.3em 0.3em 0;
+  padding: 0.1em;
+}
+
+.sum-points-field{
+  flex:1;
+  font-weight: bold;
+  font-size: 2.2vh;
+  text-align: center;
+  margin: 0.1em;
+  /*padding: 0.7em;*/
+  background-color: lightgray;
+  border-radius: 0.2em;
+}
+
+.sum-points-field-head{
+  text-shadow: 1px 2px 2px gray;
+  background-color: darkgray;
+  padding: 0.2em;
+  font-weight: bold;
+  font-size: 2.2vh;
+  text-align: center;
+  border-radius: 0.2em 0.2em 0 0;
+}
+
+.sum-points-field-value{
+  text-shadow: 1px 2px 2px gray;
+  font-weight: bold;
+  font-size: 3vh;
+  text-align: center;
+  padding-top: 0.4em;
+  border-radius: 0.2em 0.2em 0 0;
+}
+
+#dice-frame{
+  display: flex;
+  flex-direction: column;
+  flex:3;
+  background-color: #609E39;
+  margin-bottom: 0.5em;
+  border-radius: 0.5em;
+}
+
+.dice-frame-row{
+  display: flex;
+  flex:1;
+  /*background-color: #FF00FF;*/
+}
+
+#roll-button-frame{
+  align-self: center;
+  width: 100%;
+  border-radius: 0.5em;
+  display: flex;
+  flex-flow: row;
+  flex:1;
+  background-color: #70AE49;
+}
+
+.roll-button-container{
+  flex:1;
+  display: block;
+  position: relative;
+}
+
+#roll-button-counter-container{
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+#roll-button-counter{
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 7vh;
+  margin: auto;
+  text-shadow: 1px 2px 2px darkgreen;
+}
+
+#roll-button:hover{
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(0.95);
+}
+
+a:hover{
+  transform: scale(0.95);
+}
+
+#roll-button{
+  cursor: pointer;
+  background-color: darkgray;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.3em;
+  max-height: 90%;
+  max-width: 90%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.dice-container{
+  margin: auto;
+  width: 9vh;
+  height: 9vh;
+}
+
+.dice:hover {
+  -webkit-filter: hue-rotate(30deg);
+  filter: hue-rotate(30deg);
+  transform: scale(0.95);
+}
+
+.dice{
+  cursor: pointer;
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  padding: 5%;
+  bottom: 0;
+}
+
+#dice1, #dice4{
+  align-self: flex-start;
+}
+
+#dice2, #dice5{
+  align-self: flex-end;
+}
+
+#dice3{
+  align-self: center;
+}
+
+.innerframe-extramenu-column{
+  display: flex;
+  flex-direction: column;
+  flex: 2.5;
+  background-color: #002244;
+  border-radius: 0.8em;
+  margin-top: 0.3em;
+  padding: 0.25em;
+}
+
+.innerframe-menu-column{
+  display: flex;
+  flex-direction: column;
+  flex: 2.5;
+  background-color: #002244;
+  border-radius: 0.8em;
+  margin-top: 0.3em;
+  padding: 0.25em;
+}
+
+.menubutton-container:hover{
+  transform: scale(0.99);
+}
+
+.menubutton-container{
+  cursor: pointer;
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 0.5em;
+  background-color: lightgray;
+  flex:1;
+  align-content: center;
+  justify-content: center;
+  margin: 0.25em;
+}
+
+#rules-btn div{
+  color : black;
+  transform: none;
+  text-decoration: none;
+  margin: auto;
+  font-weight: bold;
+  font-size: 3vh;
+  text-shadow: 1px 2px 1px gray;
+}
+
+#rules-btn{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  color : black;
+  transform: none;
+  text-decoration: none;
+}
+
+.menubutton-container div{
+  margin: auto;
+  font-weight: bold;
+  font-size: 3vh;
+  text-shadow: 1px 2px 1px gray;
+}
