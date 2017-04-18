@@ -120,6 +120,7 @@ resetAssignButtonEvents();
 
 function resetAssignButtonEvents(){
 	for (key in assignButtons){
+		pointsFields[key].onclick = assignPoints;
 		assignButtons[key].onclick = assignPoints;
 		assignButtons[key].setAttribute('class', 'assign-button');
 	}
@@ -162,8 +163,12 @@ function assignPoints(event){
 			var value = assignButtonFunctions[key]();
 			pointFieldsValues[key] = value;
 			pntField.innerText = value;
+			pntField.onclick = null;
 		}
-		event.target.onclick = null;
+		var assignBtn = assignButtons[key];
+		if (assignBtn) {
+			assignBtn.onclick = null;
+		}
 		$('#assign-button-'+key).toggleClass('assign-button-used');
 		$('#points-field-'+key).toggleClass('points-field-used');
 		assignCount--;
