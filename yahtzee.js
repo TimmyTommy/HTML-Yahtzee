@@ -292,21 +292,21 @@ var rollBtn = $("#roll-button")[0];
 
 var rollBtnCounter = $("#roll-button-counter")[0];
 
-diceImagesChecked[0] = 'http://i.imgur.com/eT66RXK.gif';
-diceImagesChecked[1] = 'http://i.imgur.com/IUpLAr0.gif';
-diceImagesChecked[2] = 'http://i.imgur.com/Mn8JIkm.gif';
-diceImagesChecked[3] = 'http://i.imgur.com/jlijoBF.gif';
-diceImagesChecked[4] = 'http://i.imgur.com/eWWMSL1.gif';
-diceImagesChecked[5] = 'http://i.imgur.com/Bjyslez.gif';
-diceImagesChecked[6] = 'http://i.imgur.com/iLfeAsV.gif';
+diceImagesChecked[0] = 'images/w0r.png';
+diceImagesChecked[1] = 'images/w1r.png';
+diceImagesChecked[2] = 'images/w2r.png';
+diceImagesChecked[3] = 'images/w3r.png';
+diceImagesChecked[4] = 'images/w4r.png';
+diceImagesChecked[5] = 'images/w5r.png';
+diceImagesChecked[6] = 'images/w6r.png';
 
-diceImagesUnchecked[0] = 'http://i.imgur.com/eT66RXK.gif';
-diceImagesUnchecked[1] = 'http://i.imgur.com/I6W71Jy.gif';
-diceImagesUnchecked[2] = 'http://i.imgur.com/RyfXSAl.gif';
-diceImagesUnchecked[3] = 'http://i.imgur.com/ovFLMD9.gif';
-diceImagesUnchecked[4] = 'http://i.imgur.com/gsPyTMo.gif';
-diceImagesUnchecked[5] = 'http://i.imgur.com/fZyIs2N.gif';
-diceImagesUnchecked[6] = 'http://i.imgur.com/NZOXUNF.gif';
+diceImagesUnchecked[0] = 'images/w0g.png';
+diceImagesUnchecked[1] = 'images/w1g.png';
+diceImagesUnchecked[2] = 'images/w2g.png';
+diceImagesUnchecked[3] = 'images/w3g.png';
+diceImagesUnchecked[4] = 'images/w4g.png';
+diceImagesUnchecked[5] = 'images/w5g.png';
+diceImagesUnchecked[6] = 'images/w6g.png';
 
 function resetDice(){
 	diceNumbers=[0,0,0,0,0];
