@@ -156,14 +156,14 @@ function updateSumPoints(){
 
 function assignPoints(event){
 	if (assignButtonsEnabled){
-		var key = event.srcElement.id.split("-")[2];
+		var key = event.target.id.split("-")[2];
 		var pntField = pointsFields[key];
 		if (pntField) {
 			var value = assignButtonFunctions[key]();
 			pointFieldsValues[key] = value;
 			pntField.innerText = value;
 		}
-		event.srcElement.onclick = null;
+		event.target.onclick = null;
 		$('#assign-button-'+key).toggleClass('assign-button-used');
 		$('#points-field-'+key).toggleClass('points-field-used');
 		assignCount--;
@@ -333,7 +333,7 @@ diceButtons.forEach(function(btn){
 rollBtn.onclick = rollAction;
 
 function clickDice(event){
-	var index = diceButtons.indexOf(event.srcElement);
+	var index = diceButtons.indexOf(event.target);
 	if (diceNumbers[index]!==0){
 		diceChecked[index] = !diceChecked[index];
 	} else {
