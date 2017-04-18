@@ -9,6 +9,11 @@ var assignCount = 13;
 
 function initGame(){
 
+var imgTags = $('img');
+for (var img of imgTags){
+	img.draggable = false;
+}
+
 function setAssignButtonsEnabled(enabled){
 	assignButtonsEnabled = enabled;
 }
