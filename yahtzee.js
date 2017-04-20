@@ -9,7 +9,8 @@ var assignCount = 13;
 
 function initGame(){
     var imgTags = $('img');
-    for (var img of imgTags){
+    for (var i=0; i<imgTags.length; i++){
+		var img = imgTags[i];
         img.draggable = false;
     }
 
@@ -197,7 +198,9 @@ function initGame(){
     
     function calcEyeNumberPoints(num){
         var result = 0;
-        for (var x of diceNumbers){
+        //for (var x of diceNumbers){
+        for (var i=0; i<diceNumbers.length; i++){
+            var x = diceNumbers[i];
             if (x === num) {
                 result += num;
             }
@@ -230,7 +233,9 @@ function initGame(){
     }
     
     function equalNumbers(arr){
-        for (var x of arr){
+        //for (var x of arr){
+        for (var i=0; i < arr.length; i++){
+            var x = arr[i];
             if(x !== arr[0]){
                 return false;
             }
