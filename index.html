@@ -6,188 +6,419 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="yahtzee.js"></script>
 	</head>
-	<body>
-		<div id="title-bar"> Yahtzee! Roll the Dice!</div>
-		<div id="window">
-			<div id="frame-left">
-				<div class="innerframe-dice-column">
-					<div id="dice-frame">
-						<div class="dice-frame-row">
-							<div id="dice1" class="dice-container">
-								<img src="images/w0g.png" class="dice"/>
-							</div>
-							<div id="dice2" class="dice-container">
-								<img src="images/w0g.png" class="dice"/>
-							</div>
-						</div>
-						<div class="dice-frame-row">
-							<div id="dice3" class="dice-container">
-								<img src="images/w0g.png" class="dice"/>
-							</div>
-						</div>
-						<div class="dice-frame-row">
-							<div id="dice4" class="dice-container">
-								<img src="images/w0g.png" class="dice"/>
-							</div>
-							<div id="dice5" class="dice-container">
-								<img src="images/w0g.png" class="dice"/>
-							</div>
-						</div>
-					</div>
+    <body>
+        <div id="title-bar">Yahtzee! Roll the Dice!</div>
+        <div id="window">
+            <div id="frame-left">
+                <div class="innerframe-dice-column">
+                    <div id="dice-frame">
+                        <div class="dice-frame-row">
+                            <!--div id="dice1" class="dice-container">
+                                <img src="http://i.imgur.com/LvyhocM.gif" class="dice-img"/>
+                            </div>
+                            <div id="dice2" class="dice-container">
+                                <img src="http://i.imgur.com/LvyhocM.gif" class="dice-img"/>
+                            </div-->
+                          <div id="dice1" class="dice-platform">
+                            <div class="dice">
+                              <div class="side front">
+                                <div class="dot center"></div>
+                              </div>
+                              <div class="side front inner"></div>
+                              <div class="side top">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side top inner"></div>
+                              <div class="side right">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot center"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side right inner"></div>
+                              <div class="side left">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dtop dright"></div>
+                                <div class="dot dbottom dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side left inner"></div>
+                              <div class="side bottom">
+                                <div class="dot center"></div>
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dtop dright"></div>
+                                <div class="dot dbottom dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side bottom inner"></div>
+                              <div class="side back">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dtop dright"></div>
+                                <div class="dot dbottom dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                                <div class="dot center dleft"></div>
+                                <div class="dot center dright"></div>
+                              </div>
+                              <div class="side back inner"></div>
+                              <div class="side cover x"></div>
+                              <div class="side cover y"></div>
+                              <div class="side cover z"></div>
+                            </div>
+                          </div>
+                          <div id="dice2" class="dice-platform">
+                            <div class="dice">
+                              <div class="side front">
+                                <div class="dot center"></div>
+                              </div>
+                              <div class="side front inner"></div>
+                              <div class="side top">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side top inner"></div>
+                              <div class="side right">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot center"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side right inner"></div>
+                              <div class="side left">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dtop dright"></div>
+                                <div class="dot dbottom dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side left inner"></div>
+                              <div class="side bottom">
+                                <div class="dot center"></div>
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dtop dright"></div>
+                                <div class="dot dbottom dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side bottom inner"></div>
+                              <div class="side back">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dtop dright"></div>
+                                <div class="dot dbottom dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                                <div class="dot center dleft"></div>
+                                <div class="dot center dright"></div>
+                              </div>
+                              <div class="side back inner"></div>
+                              <div class="side cover x"></div>
+                              <div class="side cover y"></div>
+                              <div class="side cover z"></div>
+                            </div>
+                          </div>
 
-					<div id="roll-button-frame">
-						<div class="roll-button-container">
-							<div id="roll-button-counter-container">
-								<div id="roll-button-counter">3x</div>
-							</div>
-						</div>
-						<div class="roll-button-container">
-							<img id="roll-button" title="Roll the dice" src="images/rollBtn.png" class="roll-button"/>
-						</div>
-					</div>
+                        </div>
+                        <div class="dice-frame-row">
+                            <!--div id="dice3" class="dice-container">
+                                <img src="http://i.imgur.com/LvyhocM.gif" class="dice-img"/>
+                            </div-->
+                            <div id="dice3" class="dice-platform">
+                                <div class="dice">
+                                  <div class="side front">
+                                    <div class="dot center"></div>
+                                  </div>
+                                  <div class="side front inner"></div>
+                                  <div class="side top">
+                                    <div class="dot dtop dleft"></div>
+                                    <div class="dot dbottom dright"></div>
+                                  </div>
+                                  <div class="side top inner"></div>
+                                  <div class="side right">
+                                    <div class="dot dtop dleft"></div>
+                                    <div class="dot center"></div>
+                                    <div class="dot dbottom dright"></div>
+                                  </div>
+                                  <div class="side right inner"></div>
+                                  <div class="side left">
+                                    <div class="dot dtop dleft"></div>
+                                    <div class="dot dtop dright"></div>
+                                    <div class="dot dbottom dleft"></div>
+                                    <div class="dot dbottom dright"></div>
+                                  </div>
+                                  <div class="side left inner"></div>
+                                  <div class="side bottom">
+                                    <div class="dot center"></div>
+                                    <div class="dot dtop dleft"></div>
+                                    <div class="dot dtop dright"></div>
+                                    <div class="dot dbottom dleft"></div>
+                                    <div class="dot dbottom dright"></div>
+                                  </div>
+                                  <div class="side bottom inner"></div>
+                                  <div class="side back">
+                                    <div class="dot dtop dleft"></div>
+                                    <div class="dot dtop dright"></div>
+                                    <div class="dot dbottom dleft"></div>
+                                    <div class="dot dbottom dright"></div>
+                                    <div class="dot center dleft"></div>
+                                    <div class="dot center dright"></div>
+                                  </div>
+                                  <div class="side back inner"></div>
+                                  <div class="side cover x"></div>
+                                  <div class="side cover y"></div>
+                                  <div class="side cover z"></div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="dice-frame-row">
+                            <!--div id="dice4" class="dice-container">
+                                <img src="http://i.imgur.com/LvyhocM.gif" class="dice-img"/>
+                            </div>
+                            <div id="dice5" class="dice-container">
+                                <img src="http://i.imgur.com/LvyhocM.gif" class="dice-img"/>
+                            </div-->
+                          <div id="dice4" class="dice-platform">
+                            <div class="dice">
+                              <div class="side front">
+                                <div class="dot center"></div>
+                              </div>
+                              <div class="side front inner"></div>
+                              <div class="side top">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side top inner"></div>
+                              <div class="side right">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot center"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side right inner"></div>
+                              <div class="side left">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dtop dright"></div>
+                                <div class="dot dbottom dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side left inner"></div>
+                              <div class="side bottom">
+                                <div class="dot center"></div>
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dtop dright"></div>
+                                <div class="dot dbottom dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side bottom inner"></div>
+                              <div class="side back">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dtop dright"></div>
+                                <div class="dot dbottom dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                                <div class="dot center dleft"></div>
+                                <div class="dot center dright"></div>
+                              </div>
+                              <div class="side back inner"></div>
+                              <div class="side cover x"></div>
+                              <div class="side cover y"></div>
+                              <div class="side cover z"></div>
+                            </div>
+                          </div>
+                          <div id="dice5" class="dice-platform">
+                            <div class="dice">
+                              <div class="side front">
+                                <div class="dot center"></div>
+                              </div>
+                              <div class="side front inner"></div>
+                              <div class="side top">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side top inner"></div>
+                              <div class="side right">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot center"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side right inner"></div>
+                              <div class="side left">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dtop dright"></div>
+                                <div class="dot dbottom dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side left inner"></div>
+                              <div class="side bottom">
+                                <div class="dot center"></div>
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dtop dright"></div>
+                                <div class="dot dbottom dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                              </div>
+                              <div class="side bottom inner"></div>
+                              <div class="side back">
+                                <div class="dot dtop dleft"></div>
+                                <div class="dot dtop dright"></div>
+                                <div class="dot dbottom dleft"></div>
+                                <div class="dot dbottom dright"></div>
+                                <div class="dot center dleft"></div>
+                                <div class="dot center dright"></div>
+                              </div>
+                              <div class="side back inner"></div>
+                              <div class="side cover x"></div>
+                              <div class="side cover y"></div>
+                              <div class="side cover z"></div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
 
-				</div>
-				<div class="innerframe-menu-column">
-					<div class="menubutton-container">
-						<a id="rules-btn" href="https://en.wikipedia.org/wiki/Yahtzee" title="Yahtzee Rules" target="_blank"><div>Rules</div></a>
-					</div>				
-					<div id="menu-button-newgame" class="menubutton-container">
-						<div>New Game</div>
-					</div>
-					<!-- <div class="menubutton-container">
-						<div>About</div>
-					</div> -->
-				</div>
-				<div class="innerframe-extramenu-column">
-					<div class="menubutton-container">
-						<a href="https://de.linkedin.com/pub/daniel-thomalla/113/b60/a26" title="LinkedIn Profile: Daniel Thomalla" target="_blank" rel="me">
-							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/2000px-LinkedIn_Logo.svg.png" alt="LinkedIn Profile" style="height: 4.5vh; padding:1.2vh; display:block; margin:auto">
-						</a>
-					</div>
-					<div class="menubutton-container">
-						<a href="https://www.xing.com/profile/Daniel_Thomalla" title="XING Profile: Daniel Thomalla"  target="_blank" rel="me">
-							<img src="https://corporate.xing.com/build/images/navigation/logo.svg" alt="XING Profile" style="height: 5vh; padding:0.5vh; display:block; margin:auto">
-						</a>
-					</div>
-				</div>
-			</div>
-			<div id="frame-right">
-				<div class="innerframe-top-fields">
-					<div class="assign-buttons">
-						<div id="assign-button-ones" class="assign-button">
-							Ones
-						</div>
-						<div id="assign-button-twos" class="assign-button">
-							Twos
-						</div>
-						<div id="assign-button-threes" class="assign-button">
-							Threes
-						</div>
-						<div id="assign-button-fours" class="assign-button">
-							Fours
-						</div>
-						<div id="assign-button-fives" class="assign-button">
-							Fives
-						</div>
-						<div id="assign-button-sixes" class="assign-button">
-							Sixes
-						</div>
-					</div>
-					<div class="assigned-points">
-						<div id="points-field-ones" class="points-field">
+                    <div id="roll-button-frame">
+                        <div class="roll-button-container">
+                            <div id="roll-button-counter-container">
+                                <div id="roll-button-counter">3x</div>
+                            </div>
+                        </div>
+                        <div class="roll-button-container">
+                            <img id="roll-button" title="Roll the dice" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAR2FJREFUeNrsnXeYXVd57n9r7Xb6mTO9akYaFasXF7lX3HChhh5aHNqFEEgCKcAlIY2EUEKA3JBAbHoMGIxNMbjK3bLVe51eT2+7r/vHGUsWEsaATWJnvudZ0jxnZvacs9e7v/J+ZQmlFPPyv1fk/C2YB8C8zANgXuYBMC/zAJiXeQDMyzwA5mUeAPMyD4B5mQfAvMwDYF7mATAv8wCYl3kAzMs8AOZlHgDzMg+AeXlhif7zL6TWLUD5IckNAyRX9+HXHKSpgZCYbUn8so0zmkOFCi1mYrYk8Uq1xi8HCnemhNEcR0/HGi/ZHkKXRAfaKD50AHe62GS2JC7X25JnSkOznJnSDq/q7OpaOvBQKtMEusDNV7BaUghdw6/aSNNA+QFGOgZKYU8XibSncfIVpKYhLR0nWyGwPeK9LSilKO4dZeqB3QhNIuRziHM3gNYotEchVAgpANH4ngChS6RpEJRtpKVDoADReF1vvHeEQMwtLRHBLlTxKw56MoLnuHQu6af+8FHGHt6N1ZT4jd7u1MN7nx4Az40IQttDS0TMeFvyvaCuV36wGolhNicOtC5dsKepvfVbquZ+x685TuB4x+7hvPyWNcBzIUHFRmiZ89tfceZX9aZYv5+vkrtnF/XpAi2DvUtWX3/xEqdavz4Mgn+yp4s35XYM/ZtfcQ5JS4f5msXnqQ8gAKXwCzUi/S2vbLp4+aba3vH+o397K+5MmcyFK5BSo54vUyuUyW07wszmg51mU/wDvVdtONi2cel3o+1NVwaOj19zCP1gfreeNwAQoPwQv1AjdfrAHzRfvOLm2VsfZ/rbj+JOFMnetgU9ESWxpIviyBTZoXGaFvdQ2DvK8I8eZ/rR/QSu97LUku4fd12y+ommZb3vlLq2ILBdQtdHKTVvIv7HmgAhUI5PENpkLl3xH5H+1rdOfv1BypuPYHSkkLqOM16gsmuE+Gk9lPaMML79AB1L+2le1U/pyCSV4RnKR6YwU1GSg13rE70tn48vaCWoO18pHZr89/pk4b6g5qKCEDRtfhf/x2gAIQiqNsoPaXnx2tvMnsxbR79wJ+Wtw5hdTQgpUWGIjOiUNh9BS0WJL2inNDZDYWKWlmV9oECPW5jJKG7gM7H9EKM/2cLM5gP4Ned3M6v77+29+vRHYl2ZNwKmX7UJPX9+J/+7ASCkICjXkaae7HrrhQ9LS79m5JM/wj46i9meOuFntWSU+qFpnLE8iRW9EComdx7CakkQ7WjCr7n4EpJmjN7mdvyWCLnhScbv2s743TuoTxfOive339h7xfrhlnWL/t6IRwbdYg2vYh8D4rz8NgEgwJupEOlrWdv7nit2e9nKxpHP3IFfqCG7knhRgR+RKADV2CABVLYMYXVnSPS1MXNgiNJ0ntaVAwS+j9Q1opvG0b+2k8EDipbudvyMhZevMPnAHkbv2EJu13CHFrM+2HrGkoO9V677ZnpJ1+/4FRvl+fMg+G0CwM9VsXozV7S+dMOW+oHJ3pFP/wTl+6juJEktSveUpC0vMZMxAk1BqNDSUSq7RvDyVeLLe/HrLhPbD5DubSPWmSGsu/hVh6nJKY5+9V46H8iTSTfhxTSspjihH5DbOcTYnVuZuHcnKlSv7rp09X+1n73024Hj6YHtzpEy8/LcAECAChVerkJiff8Nba886ye5O3eJiRs3oScjhO1x2t0I6funmLxlM2PfehDxyCjRRIxQKISuEdZcSpuPEF3YRryzmakDQ9TyJdqXLiCIaojlbXS2dZKL+zx04w9o214i0poiDEOkrmGmY+jxCPVskeG7tjLyw81ocesVvVdt2CGkTLvFGkJ7jtlu8b8RAHLO0y/bpE5f+OHMxcu/OPu9zcz+YAtGS4IgYdBMlNjDU+zcupVJt0jer3P0wR2EExW0uAVKoaWiVHeMENY9YgvbqRfKjO86RKavg3Qqhb0yw6yoEq0ohuwsO7/yM/oqEZzI3F1XoJRCT8Zo6m6j4tQ58L0HIVSnDb72gkekaWDPlPBtF7/+HK2qgwrC5622+ZXDQKFJgrINAtpfedaNVlfTG8e+cCe1PeOYrUnQJDKiEztc5fCOfdgibNj9OfNfnsmT6k3hVV2kZeBNlyhvHya5dgGxPaOM7znEglVLaO3vJj+bRbx6Ldk/34sCdo8fofvHO2h+5XKqs0WEgiCm0XKwTnrfNN0rOhhaALtv2cS6N16x7LS3X/XJPf/64/fHulpQoXpunn4nxI9CGITPS2XwK2kAIQVetoKWiFhdb7rgXqsz/cbRz95Bdc84RkeqoRlQxKRJYXia2bB6bPOfeo1jLelKoSUsyo8fRWiSxGAnpekcs0fGaOnvwggEqbULWPz3ryLe2wLAzOgEUTNy/LKmhpZ3qByZYeLWzQxud0lH4xz42WYWXLXhfS2r+lvd2TIiVM/6wgvRTA0RNyAIX/gmwC/byKjR3vGqs54ALhz6+G240yWszvQJGy2FpFapnPIaZmsS5RyP22XMxJsuUj8yQ2xpN1Yswuiew/iOS7qvnWC2SsvqhZz7Tzew+r3XY1y7nPz0LMJXKAXCC6n1RTFaEmQ1h4e//iN69rlQ87Bth9azFn/YLpZRIiRU/rO6IMR26nihh3ieZtafmQlQirDuYrYlz2q5as1ttQOTbRM33Q+A0ZJEhcfRLxR4msLKJE+6THJ1L2ZfBi9bPaYuw5qLV6hRuHcv3TdcTHJRF9M7jjC+6xCLNq5GaJLQCzAHu2le3kdlMk91PIvjVvFqDsLXsPsTOC0Bcm+NMa9IeNMPWfPelzB9YJgF15zxzsKukQ/VZ0tlIx55Fm+dQhM6dWFT8+tzSSvxAtMAc55+UHWJDLS+tvmKVY8UHjzQNv6l+5C6htEUO2HznxSnXMM8s49MX/ux1+Ire0hcswpNCeLpBJ6usLMljEyC1mvWkTp3MSoIifS0oEcMjm7ZQ1B2iKUSRJsSRNMJrEiEpgXtdJ65jM4zl9K6sp9IMo6fq+FfsIBCSuFXqxwqTDL5sx3ERup4YWA0r1n4F85smdD1CZxnZ4VOgFuzses1pHj+1tXoT8vpewFhuU7q3CXvTW1Y+Onp7zxG/u496E0xZMT4hY6VdAJqMZ/Uy9ajH54CU8Na1U3bDHiPjVCtVek9YxHyho0ESYNIS4rQ9vArDkZrkvRgD1PbDjO+/QCLLlxHbnIGJRoevwA0KYi3NRHrzJBa3El1PIddrRO+9XymPjEL00UmDgzR7G5kdtcQHRcuf0dhz/CfCl1DGs9O7kAKjbpXR+UchPv8zUnov2jzQ9slqLk0XXDaPyXPXPj+if/cROmhg2idKYK4TiglwgnQvPBk1k0KqHv4WkBsSSduVNA27BL+9DCHx45Qw6c2PMua12wk3xXDHS02rqEUWiqG2ZpES0U4umMvAxtWYOg6YaAIRUiIIgwVyvYJVYjUBE2DXQSOR6q/nWRPC4e/dT/RzgxFzcXbU0RftTAdaWt6w9Ctj3413tv87EQEvsLPaIiIbNi9F4oGUEGIX6wTVF1aX7rh69I0Xjv6z3dQ3zeJ6E1hRqO05ARh1cFpsyjHfVTZPZlwmdtQu1ojWTLgsWkOTY8QRDSEEzBVybPr//2IJV94IxVROp5Msj3M9jSZZX1M7xxhavdhus48jfJ0DoFEKoUdhQCFUQcVQlh2UBIiiTidZ59GZmU/M9sOUxmeQSIoHZyk85KVfzv0/Ye+amdLv7EWEEoQBD6qKYEmDEKev7UKJxmv0PYwMjF633XZA1rUfO3wp39Mbf8kdCaIxeL07Hcp/GAbR7/7IPnvPIFVCSFmnNqE+CG2bdMlktizZWwCHNs5FgbWy1V82z3Bd1Kuj5aKYbWm8GOS4W37iQgdgUAiwNLoKOoM1GKo5hi+DjoSTUlUzUXZPrHmJJ0bFpPsaSXwfGa3Hia1qLNvwXVnvSqoexjxKEYs8mstPRbBiEbQm+NgSAif3xVLJwEgvryHrjdf+I74ip5zhz/1Y/xCtZHHj5l0DPuM3r2dI4VJirhMzc5Q2jqMmYqdZAJCx8PLV+m+9gzSy3sZnRrF97wTfsxojiNM/USuQAB+gJ6K0bJmEUOHjzC1+QCptgzEDExb4X7uYey/vYeVj7pkWpuxLYWmQBMSGYKXr2FELHovWk372kXUJvIU9o7Sc/m6v4tkkmiWiT63mb/qMmIR9EQEFdUgDHm+y0kASJ+35IL0eUvfk79nD85EAbM1iS8UGc+kuHWIETt3Au1ZK1bAD0/c/LpHUHVovXY9rdevp1qtUebknH3TuUtO4ASOaSHXRyYiRJtT2GmNQ4/sIJlIoiPBDXBCn6O5SR79q6/T9/0J2tra8XSQQqAJgS41VN1DOT7tZy6h+7wVzDyyn2hXZlH7+ae9yHdcjFQUPRH5lZcRjyLTFmFEwAugSu3ksvAzF10jNLGivn8SLWahQoWKSvRZh4mxqYaafqra08VxFS4EyvYIaw5tLz2d1BmLKO0ZpfeixfRGMoza+WO/1v7SM0i96nRmJ7OYusLyBEocC7ERCqSu0XHhSg7dso0VD+whsaYPO2mhnd5Ha67ONnOK0T//F65v/wDuBS14Y3kUAiEUmpLYQlEPHFo2LEIoqA7P0nbW0k8d+c5Dq9189ddLFNkBsj8JTQbCCV54GiCo2jUxx+c/GeMLIQiDENuxT7qA0Zw8HgX4AX6pTsvVa0mdsQh3uoSWdch2aQx8+S1kzhgksbybrndcTNe/vZbeqsXGQgv96Q68JpPQCwDR0DB+gBY1iWdS1Ft09t/zOE0tGaQTIi9ZyGh+EqMWsnXmMPd9+MssrsbxY1rDDCAJDEGTZ3LabAwDjcj6PjRfke5vX9V5zrKVAFYmjtX0K6x0jEhHCpmJoF4gRaonaYDs7du/2fqSDecl1vVfUd46DEIgvRC/NYI0DXDd4+iJmCTXL8Ar10EIvHyV9HlLSZ+3FG+m3GiU0CX2UBZjTSun/ecN+K4HizKs2RJif/JuDm3fR9ifpu2vriLXHkPmnWOugKbp+FWH1ktWcuRbO8g9dgijJ4W+sI3Wt13Iljd8HJ+Qn217iBX/9QgtN2ygOjrbAFDCxPjKXrwHxll05UqmXtHPWG9AJBKl+6LVf10+Mv0yKxU7KVfx9N4/+Dq4lkLUFS+EgvWTNEB1z9j+4qZ9n4kt68LsSBPWHKSrqEWg+erV6GbD4zebEzS/7kyMtgQxM4JSCmNZBy2XrcIvVFFBcMw0aIZOOF3Bz1UpGR4rtgWEH/oZN//gOzwwtJOH7nuA8b+5jUxzBiVBItGEjlQCM2KRWdBJIaU4ct9W2vt6cIZzDL7mAi740nvRIyYAIwePkEmmkUKiCYkudVzbZdwt8uhNt9P6hZ0sTHRQcKu0r1n00szS3u7A9tEjFpplPqNlRKIEmiL0XzgVR6fkAUpPHP1h6/Xrh9MbBxfMfP8JZMzCK1ZhME3HazbiV2zoS9EeSaPdNUZhKkssE6XnHy+loisoeA0y6OdoZYeAftmG/Op2bn7gh4SmAW4jMtj700dI77gYqycN5TktoBSGruOUXJqvXs2+b+1hw5FprESM6qEp1rzpSpqX9TH2+D5aTl9KfngKDUEYKqQmEef00rQ3R1ar863PfomXxm6g6x1rqIYO7RsGP777P+743dB+hl1ICqQmcVMgozohLww5SQNEB9oQUlDeMvSZ2PJuZLSR6pRC4hfryKSFWJihhRixHw9zeNNWju4/xNAjO6nfugsrGUP9guIINyJong3Zd9/jVAga5uBJzx9wKnUsyzoW82tCQxMaOpK2FQOMpz3u/Mv/pKenH6lJintHaV+2gI3vehmp/g6CUh1dSHQh0You+jn9TPdrVHePM2O6fOev/pWOLSV8qejeeNobUgPtnV7NRuqy0UP4NEvXNHwR4BMgnqukj1IopRpO9m+pI+okAPilOmHdJ3/3nn+XUTOILe3EL9UbjY5CEDo+WiCI7Smyf9tuStJDCIEH7P7uvei1AKGf2rs2IyaVfJGjR4dP+p7V1URqWTdBqd5Q4ZqOJiWmZSC8kPrBKZZ+8Hq2VIe5848+y4LBxUTSCeyZEqXDE6iqi24ac+ZDogWg1QM6330plU6D/MwsB+1ptvzrbfRrGYyWBANXnvEXkXScRFcLia7mp13JnjaMljihCnnWjb9SKC9ANZpL24Qm0ipsvPZcOxon7VSkv5XE6h6ElCX7yMw3UmcuQj0lzvc1aHJ18ntHyVNHzJVlAXh1h3qxitS1k1hhKQTC9THbUxin6NbteeVGYt3NCE+haQ1vXkNiRWPUxvP4no9W9VnxD6/lwbHd3Pr2jxP1NXpOGyQSjyIVaEikkA0+QGqE2SqxTJJzv/Y+us5aBsDYxDimbhDWPTKLe97kFmtidtsRigcnnmaNk98zTDVfetaSSQ21N7fxSqHFrGutrqZ7Im2p0Xh/61hkoOVeETPeWCuV8R33OetwPumqyvMJ3UaIU9469Jnoojas3gxBxWnE+aaG5ihq+dIceI9DVG+OozdFG8ilselSNEolBAqzGlLujdD/3qtO+Jst5y5j6fuuxR8vYGgaupBIBc2Leyg8cYTZfcPEFrRi5yqENY+ln3gtBzocbv6zz3Dv39xIae84rX2dZLrbMHQNqWSj1VrXqQ9lSWRSvPb2v+dV3/srlv3Nq5iYmoJ8nZbB7uTCyzf8kfJ8rFQMKxE55YrEYhgtcVRMQ/i/+SOpAkXo+CiBpTfF/ig+0HYo0t30Az1hXaRHLBMh44EpLzTakjf2n71quxmLdjvl2jFt8RutX+YEOhOFY85g4Z49mzOXLB9Jn7Okb/rbj6GnNTRARTUc3z3pYumzBtHTUbzpElIIaNAyDZsuGk9neXyW5O+fxfommHniMIklnSx8yyUILySouEhdRwhBy4o+Zn+0nX233E/khjOpeHVajCitXoxoyWLRn7yOoR372P2z7YzddheZnz1Kx7J+us5YStOCduxKFbtcA0PHni6iWQYLL1lPvVqnNltEahK/YtN/6boPTW4+8InA9Y5FFD8vGhp1HAIVoIlfv5tOhQrlBkhD6zTbU+82W1M3SE12uNkytZEsrRsGUVJSK1bQNZ01G9bTtqR3da1W23r/7duWeVU7H2lJNVrinqsowGhNHNPb7nSJ6p7xf0hvXPxZo3k3hAG60nFaLeKre8g9enzYQHywg84/vpxcpYgWFVh11VD7QiKlbCRyUBgu2FNFOl5/Hr1vuRgBuBMFgpqHrhnoUZPMQBdHPv9Ttn3/HhIfvJTBxYOs8lrpjDSR1CKNkrOsw+CC9dT/5Exmi3mO3r+d4cNj5G+fJdGcJtXXRtPSXiJxC6dm4zsutYk8CoVpGISAV6qT6m5NL7xk/Q1TWw7+e7wzc4oCF4FhGAwdPIhnu2hx/dfY+BDl+UhTX2J0pt5pZuLvkoZuBcUadq5CfTJPpC1NpLOZ0kSOarXGyvWrWbRkEKscUEin2pb+/uU/q45nT9ejJkbcetaSUOLnzwwa+OMXHzdRjQ6bWPdbLiwW7t6jVx4/2qjpi+hEpEH+gf04roPZk6H1I1exrGUBqS1Zqu0mE0kXf7KMYRjHiB35JBhEQytoUh7P8imINieJp5Ps+cfvs2vLdpr/6FLOX3E656heUmYMTwXHtJgUjScTpSj6NaoxCBMGubEpprcfIchXSTQ3oSUs9HSUaEcToVIErodSilBBSICejFKbLow//vlbe5ACzTh5gzVDY3xmAk8P0S0TLW4RVByUFyAjOqHjN2y0Jo5PCFGgVIjQJXrUOh9dvtloiv+ebmqEdQ+/UCNwPFQY4hbq9FyxAZmOMrVnCCsa4exLzqc300E6MCn4NbKdkj03/uxjO//5to/Eelp+bRpi5M6tT68B3OnSCd6bO12qVXeNfjGxdsE76zvHkYaOCAWu69D7x1cR37CAWkyx+qiF+MN72LHpMbyURsdHr8fe2EEwVkTTtGMbL2mMQnnSWZNCQqBI9rWh1Xweefu/MhKp0PM3L+Xi5uWsl30gwA5cpGi0lwkEQgmUCFFAyojR5AmCXEA60sbApd2EEnLj0+TGZ1D5Ok49QCYsRNxEaRIRBmhohBWHzMKu7kRn81v2/eChLye6mn/OSZL4yseOeFhtqWfm0QcKpEBGzFfoCfMPZMy6ULcMqLmNWgvPQ4WAJnFnKyQWdZAY7GBq62Hqrs3yNSvp7+jFqPpUcYhJAz/nsejVF3x46sF9t088tOeR9EA74bNgCk4CgHiqBy9AT1iUtwx9Or6q952RgVbCfA0tYaJ5jacvV8izYipD9GMPctMt36RCAJPQ+SdFzrz7zyjHLDRfNRzBp2z6k4sgJD3YjXtwmgc+fBOziyyWvPUaLk0vZzDeRRAEGEojQIHeYAYD18d3/AaYUEihz8FCkhQWoi7wwxAr1UJbWxt13yE/k8d3HDQHiGj4msQNGrMGfNtjydUb36276stG1DpGYimlSKRS7N+yg9nxoacHQKhQYYgwdWRUe4sWt94jLWO9NHSkqUPdJai7DT9ANXys0PFRQNu5y6lNFshPzNLa18Hg4GJ0N8SQOkHo4qqAhKvjxjRWf+Cl3629N9sTOAFWJnHKmszfjAl0T0xySMuktmdyvzOafzixbsHZ5bv3ohkGMqYhYxbJWILE7WP88NYfUDOAOW5ncmyc/OOHSZ09iD9dPvbUa+JJE9D4v+W0PvIPHWDT33+N6jkdrLz+fC5Lr6A33Ubg+ehIgpiGEYnh5qpkJ8Zo7unAak5QnS2ha5IgDJBizpyIBhQMKbGwEJ7ADgTRTCuOCKk5dXzfxxKSqG7iKA/lKVKxeHvCihJ4IdKQoBS6YULVZXZoHCNp/kKPXnkBImLGtKj++1rCerfQtcVC05BSIC0d6QYE9YbpUUHYWCHUZ0pk1g4Qa89w9IeP4VuCJYsW05lpRav5BCpsGEgREghFqqDoGOzrXvymS7708B9/+a2xrmY0U+c3yUqcBAA9GTm5ssfzsQ9MfbH5kuVnu60pCBVGUxyRtuj14ozeu52jQQERnmiYfM/H0k0QeuNmPLn5CvSISaa7jaH/epDHbv4pwRX9nHvp+ZzbvIzmRArf8dB1DT+qE06UmN05zPieIYb3H8T2HC5460tYcvHp1HJlQM3dBEGgFFKoY5yAQBDVTKKYeCqgaujUNRc39HFDHw2TqBXHiUsn0d3SoJClBAHJdJpHb7+bmdEJ2tYvOkEzqiAkdAOMhLVYRvV3aQnr9UKT7agnHV+BFosg/ICgYhPObXzoBygvxLcbT0r3RWvI7xwmXygwcPpyTlu8BM0JMISOozyEAFcHV/kkfJ3UTMDgK857S3770M/2fOmOryf62n4j1vAkAARl+5R2rfTo4Rubzl3yudhpXRFn1yRGItKgSH0oTGVP4gS0qEnzigWEFRdd0+YiAoFUYCVjpFub2f3FH/HonfcTuXIZLzrnQjb2rMCQOsoNEULgRiTWUInaQ0cojY3j1WvEU0l2/vAxVq1bQ/TqC6mK8hwZ1fgdaHQehUKhVHiMUFIodKGR1CLENRM39LFDj6JXJ9qSYtt37v63HbfdR6qzBaXA0HW8MGDv5u1E4rFjyR8VhCgvRIuaG/Sk9T6Rst4gpGg0qgQgDQ2pS/RYBKEUfrH2lM0PUX6D6q1PFei6aBV6LMLMlkNovSmW9i2kLdUMFQdfBQ1I6xqLylEimsHhVBVRs2mqSlb+4bVfqxyeur06mS9G29O/tinQT0UEneQXSIkzkQ+q20duajlrydvCkSK6ZaAHGkHGIkyfrB77X3Y2zaf1Udk/cSwMFCEk2zNEdJPHP3Ez23ZvJ3Ptal50+vmsX7gCPIX0GgWfoSXRxyuYu3M4MZNIRxP6jM/Int2cfd65nP+Ga5nOTSNUSMPDaGy4kDpGzCKRSqALg1qpjFepI+Wc+ZnTFLomMYRGqqOFHY9s3XH3P3/zHzzbJTs0iS41QqWYqReQhk4kFZ9j7UJkVF+txcyPBiYvdyLQHE0iAyjnSuimgaZLtLiFlBJ/ttR44kPVAIEfEnohft1GM3R6rz6d6U17KPl1BvuWsaRvEcL2kULDVyG+KeiwLeRDwxRKVZZccBqHBnTIV2hpb2bZu6767qMfvPEyp1RFi5q/Fm18EgCiHU2nCBbBiFq4R2f/Tp677G2RngxSk5gICk6FrndfRmLT41TchvZoXjPAho++Fm+6hCYaSR2hoKm3DT9X5b7PfYvd44dYcOlarjnnMpYOLCaouehIfIIGgWSZhIdzTBweoRwNyE9lqWXLnLVqLee85ToqbQbBbBVd6g2qWYGZiaPrJrXxLCOP7UGFit41i9Etk9D1CJRqgEuFCKWIpBOUq/WJez73Xxd5jkumvxMNgQJmyjl0aaEjG3St66OlIm/R05EvVXSXlnQzpxWiOPePMO4U0C/vR4YKLWohdQN/ttgI8+YcvsbmN2jf+mSeBdefjQwl048fwlzVxvLuhXSkm/EqTiPhJARWxKR+JE82O8OMX2H2+zm6X3M2w20WyVmX7jNPu3TwVee979C3Nn0qme7g1zkG+CQAaKZx6h9sMbBH8kdreyfvSS/uvNgfLyKFBhMVtNN7uOj2v2D07u1YTXEWvvwcdMvEmSpiGgZSSjK97RT2jnLfF7/LcG2aVZefzfWXXEVXeyde2T62+Uo17HlYd4ktbiVdcjFLFZqXNdM02EXzuoWUzAA7W8SUBgpFoEJUc5TSkWkOf/dB9m3ewd6tOzg0fJQ169fydw98nbEwi3K9RvwvFFY8Silf3HX06NEL7bqdj6biaKJhPmYqBRzfw9ANAttDCkF0UcvHtUz0A1XDY2VyAOO+CQ7cuYmjhQn0ziQrfncdbrGOpuv400WCmosCwiBoqH8vJAwC/IqNlU4w8PLzOPRvP6Xg11i78CxWDC7FqzloQhKosKExpcTGo1SuYCZNdo8dRNydoPX1p5MVedIVwfK3X/3J+nh+0+Qj+zanBjoadRi/kQ9QqP0izoigWKe6c/RvW1f2XyxSMaQSCN3EnyoTXdLB2o2vQAYKZ6pEUK4QMS2krpHqaGbswd3c/43byJo25191Gdde9mKS8Th+yUYTx598hSIElO1RbdFJXbmMdKAR7coAUepUqU9M4/oujvQJwxCRiWIcniH31UeY3LOferlCNN1gNJuIEDUjjYS+AsPQMWIRpo+M3TKx7+jvaO2JIJKIUVSAr8h6ZTwZYkatRg2AHpJc3/chszP1gbJfZ22sn+Dre7jzkfsJAZm0GHz/lQR+gG41Gl39qo0SAs9QmJaFcBX1eglCRW08x2lvvxp7OMvEI3vIvHQNyzv6SVpxqLkEc+lmIQTCCZGdSfJBDW88T2gKDm7ewYbzB/E7NZJVDQ+NwTddcvvYfTs6prcewMokfiWW8CQAmNFf3EBpdBnYI7mfulOl8VhHpjusOI2kixCofJ160UEXcw6fpmPGLBKZJvbf8QibbvkxTovONS+6jisvvhzCkLDsNFrOVTgX0c8FNEo1TIcD9RaoGYrSE9sY2boPGTVZ8qIzcE0FjoORiOKPZKncvBNN14j1NFPbMcHOHTs5b8UGPvD9zzJkZxFOgBmLoJsmhx/f/bGxA0c/kmxOY1omQil0TaNkuniawpQWQgj8so3Vk14SW9b+sUq9xrJEN85XdnDflocBiC1qpe9dlxDpzBAUbfxsCb9YxYtqWNEIsdE6zuYh6vUa6oxOvGrj6e++bB27/vJmnM4oawcWsWTBIry6gyka4WfDo5GEbkCsp4UgYzD2xG5ivc2MDk+waGiK+OBivFqZVC6ka9Vg+/J3XP25Jz72zf8TbW1CGOI3cAKfrthRCNxshcqu0c81D/b8jVN1G84VEk1qaHOevgoV0XQCTUi2fvcuHrlnE5EFTbzyims5b+N5jWYQ2ycQglAFc1mCJ0vBwCfEJaCWgmD/GJM/eILddzzMzse3UHBqrLrwTN5926fJlgpIUydSh/FDEwxnJylXKjQT4Ybf+z2u/+jbKfZGqA1NkW5K4dpOsGPTw2+bHZ38Ury1CcMyUYAuJCW7hu+a6FJCAKHfoHfjK7u+EvoBRjIC22a4b8vDiEyU1vOW0H7tWrRY5Njme4UqQcok5er4dw4z+eBBZp0Gs9pzRif2VJG1f/4qCo8eZGbXETrecSELUx3EzQjUfPy5OiMxl6ZVCrB9Fr/kXA7ft5UjW/YgfUU1cGjTNOoqwNIMEpMup73h0ncVd49+/9B3H7yjaXH3M04YnUx8V72nzx+HivKu0a+oi9f+jWlZyGCuIWMOdGGoiDen8Cs2j37vTrbt2EbP4gHe9PLXsWzJUmqFMtJX+FKgx0xSTUkIFYWpLLZr46iAeuBipyTJfXnEf+3GPjxKPJFgwYolFLZsI5kLSESizJTz+IUa8f5mBv/gapq3HMZMxunbsJTk8l7Gqln84SmaWzLUC5V92+995LrZsckDLb2dSCkJgoCkFcGPaJRNj7iIghIgIaj5RAdbX6O3xDcGZRvNk4y1+vS85TyiyzqIdmVQ9QBqPl62hF+o4qdN0lWN0je2cHRk+Ckl8OuojGXpPG8FC67ayD3X/hXami4G23pZ1j9IUHfRhDxhksqT1dhOvkJ6QTsX/OWbuPevv0I0nSCxug+3UEUicJRPAgOv5rP8Pdf8yCtUm+18pRhtTRE+A1Ogn8Lhf1qxUjGKB8ZHyrtHf9pzwarL7ali46mnUc6UbGmilivx0C0/Yf/BfZy2ZhVvecXr6enuoTxbaFw/bRGzLKojs+y5fzthTCdz+iIKTp0gCBBxA220gvmjIYKYgdmdprp3ku1btnHO4jW85zv/xEg9j3RDNCWw63W0ZWk6N1yECBXT9SozY0eJSJPm1ham9h+9Y3jPoRc7dTuIpxtzC8IgJNWcoTCbY//unRiWjpQKUASOh5Y0iK/o+HzoeA1fwBeEbVGSy9oRtk9YctAiJs5EDr9UJ4hopFyD8jePb77QBC1XrcLzfdIDnZz1d29jywf/nWqxzIIrL2CwqYuYEYGgwfr9/D4IGjUNlfEsrYv7uP4Lf4TruShN4FRqCNkwnC4ByYqgratDLnr9RT987IM3nueWqmiRXx4angQAKxr95YUscY/KvslPGBevu9yWNKZ2aZJUU4aZoTEeuu1njEyMcv55F/KG619FPJGgOlPANA1U2sIZyrL/zq08cft9bL7nAXL1Mtf/+Q286C9/j6nhMcKISbQqyO4eYqSeJTuTRa+5vOMtN3DRR97IWDfURvJEtLkQUGjIkku5lEVDoCGwYhEiVpQDD2/7zK57H/3D3hWDROIxqsUSKgxJNKVQKG75l/+kPDZNU1cnwVyBqF+okzpz4C+1hJnx83YjAaY36hNV2UFPRNFMHXs0i1+1QQr0uIV7+xGODA81/IOFrURXdOKHAa0rBjjrE+9gz6e/y4Ev3cngP7yaZqJ0t3eBGzSe/mO1p+opm6YIEGiajp0tIiwDTdNw6jZS01CqkQwLVKOKKjXj03P+inMnrz3zjYe+uemmpmU9v7QT+iQAlLOFXw6AMODgnY/d0XLGov39569e6uQqSCkZ3rGP+390J4VqkVdc/VJeedVLCPwAr1DD0HX8mEbw+AiTP9jMoZ17qOSLtCzoJLevjP/EGEk9xpQAUXBQizJ0vvUCWg7OEkhoXTNA+oKlHChOEIxUsaTZeEqEnCPpjpdqWokoupDsuXfzWw89sfvLRiyCFYtQK9dQquGZJ5IJbv5/N3HogcdJ9fcS1n0QEFQdzNZkS2xJx0eCioc09OMAMDSMRKzR6/CUzQ+9AFFycdsMUmcOQETDaIkT7Whm4KXn0HfVGWz/8E3s/+JPWfHx1xEkDVIyQtS0qDlO430/mSmdU/0ScSx7qoTEB2qhj6+D0kH3JQFqTlMo3DAgIgzSpYAV77r6xtpo9p7ZXUPDia6Wp2UJTwLA9CkKNk/2BSW16QKb/ukbr/BicoehJNNHRtny6GaEFLz7db/PZedcRK1SwbNdfKFwkhqFzQfxb99LYAoSPS34xWkO7DvAuYvX8KpPv5+j2TF0JSAUOI6Df2YbbVctJybS5Chg+2U60q1M5x0IQ4TQjqlKMVd9FEslcMu1kf2P73l5dnhicyzdGGHz5JMgpUZzRxs/+fatbL3zPhILuue6UI5TvbFl7Z/VIgaBp5BmY6iENHTMZAwVKuzh6Ya2kPJYMaefr2EnILq0nURvK12XraN13SDFLUe560Ufxa7VWfuFt6KbBvnhKYzFPYQ0ahl4is0/9nnmNl8XGhJBYECXH6e9bDLTLjjizKLVnzQVc6l8FZCwJc3NaZa948q7pt786cWFUgUrk/yFIDipICR9xsAzKyYUgvpskfh5g59Nrl3w7sL4DOl0mne8/E2sW7GGbG4W1/ewQx8n9BBtCdw79rH/Cz9hWlbJz+Sg5rPynHVc8uE3MdYRkh+ZxtD0BqMlBVpLHG+yyOQ9Ozm0aRsTE+OsvuJcznnrdTi2jQhAEwKUQNM0kukkuaHJnw1t2/cyFapK6PnYlTqh79M12EetUiMeibLt8S388FvfJt6cwTCNufHzgqBsE+nLnNZ04dI9yvERmoama0jTwEjFUI6HPTaL8kOUFCgvJHA87OkioReQXt7Hgus2khroYObePYzc+ijl4WmSq/rovmYDYcVBeSFu4NGZaeWC9Wfj+u4JDJ568l91PMXlyICUFafp1iHGtx5i0caVGC9dwZCTRasFeASNdDmgC40gCMj16uz5yp1fePRDX3lXrCtzrKh0esuhpwdA03mLn1kpkYCg5qLFLJouX7Gppvnnv/2K13DpWRdwdHwETwU4quFAhSgCDSx0avcdJL93BC0dY8HGFaTOHuRAeRJ/towhNULmiimaoohds4x99X52PfAEY9PjHJhsaKf/t+UHVJYkUbM1QGBaJtFohIndR/59ZOeB3zeiFtFYjFqhfAwAHQM9JJMp9h3Yy83/9V8YUicaj50wss4v26RO73/M6m46g0btXqMjKBUjqNg449nGbRYCr1zDyVUQUtJy+lJ6Ll+PFYsyde8uRn/8BLWJHMnVC+h68Xqs5gRB2SYsO4QluzEqT5dcvP5sMukmKrXqXCLr1OJFJOmyIPsv93J0aozJA0e55k2vRHvbmeQmZ0lIE1+FuCpAoYhIg6r0mYq7PPL+/zh34sHdD6UWdqKCkJG7tv2SKEB75iSCjDZo48r+yQsiC5pv6uzu+t2yW8NTAb4KG1m4uZNDhBdQ1zyi16+i46Wn40vFjF1kYvQwRiCQWoPWlUISRjX0LdPInx5CR9C6sp+sVoPJYa6/5EpS/R0UKjk0IBKLogH7H9jyf8b3HPl8uqMFM2Kd8FSFYUhzawsjB47wvS9+hVCClbIISvVjLrdfskms7X15dGHrGUHZQTN19KiFHrPwcmW8mSJIiV+1cUs1zEySnqvPpHXdIEHRZubOXcxsO0RlMkd63QDLfv8SrEwCqWtz7e4WZkcK5YWEh3NUS2UOjBxhY3oDmqYRPo2dNpTENRWT1RxOtYoXldz++a9z2cZOphZp1IoOMc0kqpkEKsQOPeKhTiawWPunr7zF//DX+5xSzYu2pp4BD/Cr5BNChYgZGFJjZt/IG79/y/duf/Or3/BnpmGsNTRBiMJ1HAghlBIjVHizZaZkGaEUWqiIoKNko2Q5RKAMiWUrpm95nGI+T9apsH/nHsrD07zzrTdwxSf/D4dUHq0WEksncQrl3L7Hdl2Vn5h+zIpH0Qz9hBNFwjCkqSlNIZfnazd9hVq9TlNLS4OMOpYBDRCaJNKb+U8RKDTTwEg2PH1nqoCXKxN6AYHrYzUn6bhwLZkVfdhjeca+v5mZHUfwREjzmYvpfv15RJuTaFETv2xT2T+BPVloJJPiEZJrejFXdJDcCUNjI7Q0NbO0fxHFcukXagHhBlg9LRTiAYcf30W0v5VdB3ey7MdP0PmhFzOWO0rerxLXLJr0OFHNxFcB6bLA6+3oWPS6C76385O3XlNx3GcAgF+jqwVNEk3EGBse/dbQ/sPfMqPmWWjyWj1iXRPNJDdYMQPf93FdDwIfPVQoGvMApGLua4UGhL5Cj1q0nbkEdd8udM2g59JLWfaiM+i+7gwOlqcQRZt4U5LqdP7RAw9uvb5es6fimVRjU59qT5UiHo8TKsU3vvpVKoFN+4pBwiA4/sGlwM/XiC/vfI/V1ZQMax5mOoZAUB+axs2WkKaB1d5EZtUA8Z526qNZjnzzfgqHJ1AxncxlK0gv7iLalGhkTXMVyrtHsaeKEChk1ERGTfyaQ37TfjKXLsda2kpid8jB0aO0NbWQiMWo2fVTgkCFDWq858r1bPrcd7DCKhUCtj38BC8Jr8PSTcIgoODXKPp1Wo0EzUYCQ9eIz9r0Xbr2xdknDv3O+N07b372AfCUmx2LxzBME8d2H60WSo96nveRwA9XWfHItR1LFlxnRK1zI6kkYRhi12oEQUg4N19Czf0rlcCtuySuWcnqi1ciQ4i0pZnVHfaOHyUuTIx4jMLQ5BdH9xx6m+t5xJJxwjA46f0YhkHUjPLj79/K0L5DtLa14eUqJ7AtQdVFS0XM2OL2TwkFViZJUKpRG5pCIEgu6SG5uAcjEaM+nuPoLQ9Smcwh01Far1xDoreVaHMS3TSwJwuUtg7hZisgBFrUaNQXquNFMoFyKW8Zxrj4NPTOJN5Ykb0jhzh96apGqHyqbJ6A8ugsK667kEWvPJct374LgJprN7iBuVggJi0c5THu5CkHNl1WEy1aHF95dF225qPK8ceAB58TAJyQUtY1jIgFmqQ4MrFzeri203Pdv/c9f7HUtQubulqvyHS3X65bVrM0NDzXw/fmcudCYCpFvVKjYohGfJyroXmQjscRSjGydf8flmbznzGiFqbnn5QHVyg0XSeatvjxzbey/bEtpBJJvEL9pPIpr1Cj9Yz+L1ptaS0s29ijM4S2R3JJD/G+dhCS6liO6tRhqrN59HSc9ivXkuhtJZKKga+ojWSpj2bxSnWEoTWmoZ/KpKrGYZteoUp56zDJdQuQ0xWKM1kOJoZY2rMQP6if2toGIdVsnpd/7o8JVMjww7tYdcNV1Gs1ZAjh3GQUAw2hmZR9m1owTX+klUQ1Qry1aUXzmYuv+q0A4AQHJmIRFQLdMqiUKgdnjowczE80f6laLEd1w7g2moq/ONqUuNKKR7uErhEGIb7nIYIQ3W3cQcM0sZIRatlSfnj7/utKucIDieZ0g4JW6qRuXaEEqVSK+277CU9s2kSyrRVN108c5yoEfrFGYmXn6qazFr0xrDr4xSpWOkFsVTtKyrmxtDnsSg2rNUXHRatI9LURScfxyzbl3WPUx/OEjo+MGI16SvWUjRcQJPTGQGupIT2FKtnoMYv64RnMjjTaojThY+NMp7Nk4inaMi1U67WTTIGQgspMnnhrE6/7yv+lODmLSJiUhqaRWqPSSakGGyKRRKSBpwKO2jNkvBiWbtCxfrDrOTMBzyjzZOjE0kkiiRiBH9Tr5erNs8MTNysVypYF3S9OtqSvtaKRF0VS8UFhyoatNgzcuu3mj05+7/CWPX/gue5UvDn1Cx2mMAxpbW7lyNEjbNr+KK1nLMOyrJOrZZQisH2aNi76D6nrSF1hLWhHREyq2SLVqQJ+3SXSnqZzw0ISva2YiSjebIXCY4ewpxqUsh410SyjseHqhH4yAlMSPVJBHszjqAB/URprVTeq7oEbUH78KK1Xr6baZiIPTjLdmiERiWMaJq7nnvQZNUPHLpShUkOPmNjFOrqmE9AoIAmfZBARhIhGNROKQlDD0AyUHXr/rQA4IYTUZMNMKKiXq2ElV7ytXqrc5tVsIonYRS19XSt0QzNKs4XRmSNjD4RhOCUNDTMe/YWRilKKRCJBvlTgJ/f+DKs5iZVMotTJIVbo+Ji9TauiXU1n4oUoQ6NesakNT6O8gGhbE6397ST6WtENHXumRG7rMF62CppAj5jHR98rjtUzHGPl4jpte21a78tTrBTJF0tUfryH6to2Mm8+G6MtiTtZoLz5KE3nLyX7rceI7x9jel2CHqPlF4aGEtHgWITCtUC3QarGUy+VmtMAT4Kg8b6iiThuoeqN3b1jN2v+hwDgJDBYJrpp4LsexensvZpp3BtNxMiOTuLaDvFMilCFTxsvS13DVBo/vvMupienaGtubUwzOYUENRe9KbbSC0L8motdqkCoiHc2k1naS6wzA25AbXiWwsgsQdVB6Bp6KnJcxSvVSNxH9MZBGU6AcgMCUxAt+CwYhrCnmVpNYqU0IlmYvHMHQd2l830vQk9GcMby2PunSF61kvFvPkGyqwULjbZUBsc9OWyzRUCTFmPVIYHXlGR3W41yvtgYlinkHHvYMAmSRsrbyiSYuH/XV8Yf3PF13v8/EAAnMowCI2JhWCaaoWNGI3i2+4yikIQZZf/sCEecGToWL5jrUP4FFIbrY2TiGadUw685pHrbyCzrI9aaxivVKW4bwp7IN7p5owZazDrW6AkgQhonoUkwJ6uEboBqi6G3xXFrdcxJD81VOOZcV3CoQEqsnjbyD+6h+dylaGf0oHkhhSeO0vWSMyivbOPIbY+SuuFqypUKiXgCx3NO8HG0dJT4lhJ7b3oEIhqnve0ydi/OUJ/KzyWPJCFBQyOgEBEDJ19h+I4n/rpwaDL3P8YEPOuRh9TwPI9t+3ZipmKY0ejTVslKT0cJQqlJ+i9ZR6K7lfpEnuxDB7CnCoBCi5iIxIn2/cnNCCyB7kHbw3nCQ7OUyhWKQR3O6iZx3WrcPpf81kmCsQqOEeD7PkHggxQ4BIjJamPiuq6jRxTZu3bR84qz2LftBxz5waMk33gFXsVF1zWCOdApIGlGmTmwh2E7y8jEJDN/P8OGT72FJ5JVzIp/PIOIQihBpCXF+Kadd9WmCkeSve28YAEQi0Y5cOggE8NjRDSTunx6rRHWHGRTdHTg2rOIpZJM3rkdb7aCMDSMWGQufj/eiiykaPQGzLGMoSlZsNuhfdpgJpPC0RTmeJ3pLz2EN1km/e4LyK5Lkf5+jmJplgIO1XKZyfEJeo0MLSsHmCnX0ZVCixh4pRqFRw4y+K4r2P3+r9G8qJuF568haqtj0U4jrNLI1orMTkySaE/wk3vuJPrlPgb+7CpGqsPH/IEQhWHoqJrP5EP7/8xIxomdggqWL4TNf5L0GZmdwPM9dMtA6vJpl7B0dF17LNacorBzmNrRWaSlN0I32yWo2ATlOr4BflTiixCRsjDakw21X/JIlSBsiyJNHSEFWlOUSH8bUz98BO+23dQ3tlN55WKaFvfQRJQMUVZ0L+K0P7iW8kAEreTOdTqDkYpR2j0GRYeed17K1pt+jFOqUg89NKkdrxKSEq8jyvDQEFPjk+SCGg/c/GOikzYiqs/1YDYS5JF0nMLu4ceq49lHU72tGFHrhakBTMNgJp+lFnp0dvdg6PozAA14hcpM9dD0Hc2nL7zCTDUKPVBzAx0cnyBhEOyawv7WDuxalYoA6/Q+UpechlutUaxMYM46OFHVUPGej9AldSDcPkni8tXkuiXxVy2heXqAFk8hm2PkkgFuvoyB9iRd0GhoTUaZvGMbi294Edl1e3no777BVZ97L+5oHt00CMMQJ1tiwRUbuPcfv8HI9p04hGzftY0Ldh8kee4A1Xq+UUomGt1Y+b2jH9d1HdM0T2kSXxAAiKbiHH3iMEd/tpVMS+YZ5bMEAidXxi857znzCzfsy6wdwMvNzQ8WoGI6ouCQ3jyEF2TIaSbTIxNMPnA3aqxI96dfRby5h9gnHuPogQM4UYlbd5jNzhICcSuKW7Uxch6eGTLbrqGkRHg19KLCRJ+bvHZinI8RMHbLY6z5w+vZ9LpPs/OLP2L9O6/HHp5FaBKvatO2pJ+zP/Aqbvrdjx5vxJWKuNTRhCBUYMYsnFyl7hVr38/0dyCNU2/1C8IECCGwK1WE7zc6Y57BUoGPmY5S2jm8f9/Hv/9yqUAIRVh3CGsOLgGJrTk6giip1QuItTcRX9BGelkPR7+zidI/34d29UoiH76MdRs20FrS0aaqdFQMXv7i6+j/wDWECQMzFkV4IKZraNN19GpwrFFWiCfno4hjpkCPRbBnSlS2j3L6P72JB77+Q2YeP4jRnGjwDVKSPTLK6W+4kqs//HvEMylWXX42HWctw82W57x/QawpxfgDu/96atshvz5bpDo+S3V89gXqBEpJcSaHnyvhm7/CyWAChC7Y9/kf3ZJa3PnJhb978ftLByaQUuCFEIlECFWI7weEam4AhKYhkEzf/CiLbriMwysNev7vxazdsQZntky8KYm7sYuRaJ2ufJJwYYBXsXFLVdxCY3lVGxRolnF87NxTClOsdJTph/ay+PUXMfC+q7j3E1/n1f/5IVxRRULj3OShSa74yFs4/bVXEGlK4NTsxqgaAZFEjOp4Lhh7dO+ndUPHr7m/Ql/A81BCP8BIx4n0thNpzfyq6gMzk+TQ1zb9UdsZS1+W7G9dWB3NYlR96qsyxO8ZY3TzdtyUjut6BEFAjRBdSJKaRT1bYQqbibNjRIwMbuChSrNEio3oQZMSoyVJojODCsIGGIpV7JkSdraEV6mDlI0JZXOZQyHASEQ5+p2HWXbD5Wx+/DCP/PN3uOBPX0f28DhSk4SeT25okkhrsjExpWajaxpu4JNoaeLwXU98cWb30VpTfwd+3XnhAkDTNZxaneJEFuUq/Jr3q+0/IDWdysgs2/765kvO/Ze3HY00J/FyVcqtivjvrmDhVIltD25mtDBJrpanC5NL3/oKamkNbSLEUBJyAYgaUQDVIIgEQAjKCQicxoBpI2ISScdJ9bXjV23qUwXqjtOo97d9rFiEsGzjV2xcr87Y7Y+z7o9fzrY//RqL7t1B1znLKYxNH6vxc0q1OSXYaHy3YhHs2SKH7njs7zRNw686T1vk87wHgBWLMn10jJEte5FhgPtrzvHXIxojP3xsaPvfNb/8rI+/+buVmofMecx0W/R+7DLW3DVA97bDBI7HwAVr8a4coDQzS0TJYwddiKei6pQsPig/JPAb7J6u6WTOHCS2a4L8tx8nPzlLLnBJnz1IYmEHYgoqR6dpOtLJ4vdczUM3/owXL+rGTMTwavbJhVxKkWzJsPv2+2/NHhwfTnW3/PLP/bx3ABF4nke8v5Hylb/ucfFCkFjQyvh9O28Z+d4j/zzwsnP/oHhwnGjOYzTmY/7OItpfvRpdSiaDCu50lrinEcq5mVLqVLrl2KVPfP1JVjEdwd82gfrHTVjTRaJOlcLwOId+sp2+t19GZuNiQidg/L6dLH31hTgvWs7jt97Nxrdci1urz5G96oRcSFCzGd2890PJ9ibimdQvnRkgXxAmoO7gVm2YG9j0ay3XRyIxElG2f/YH7y3tGT2UXtAOCuKOxJiqU5yaJTsxjTZZIxrqCE0eG0GjCXlsunnj60bXtDY3JdVqSRIfaCfe3YIRMRv6QJdEt8zSGcvQumGQeF8LLSsXELWiHPnk7aixImZLApRi+Eeb6d24nFpG58B9W9DSsUax7VOIDSsVJ3tg9JCdr+xoX7yAeCZNornphPXC8wFMg/JsntLRaWRb8288XFtoksrwDA994MuXXn7THw3FmpO4xbkCjXDucZ6rdJ5r6TnpmT+2LaFCRgyIG9Q2D1HeM4bRmabtkpUkupopF0uYoUDGDHRNNOx4EGC1JRmbGad+/2HWfeYt7LvtQUrD00xu2k33BSuZunsX8Yk2Ek1JLE/gz7WI6YbB9N7hj2r63FgbpV74JkBqErtUxavY+CnvWblmtL2JkXu2Dz/2V9+47tJ/edcPCnW/MTtJiOPqfK6X/0TDf+IB0sKQYBnUv/IEpVu2kpuYpuTW2d0eYdUHX07P6y5GH8hR+NEeZhM+nuvh+QEEigBwR3J0trXjXLae2S2HmXhiP8m2DB3nL2di5xAdqxeRkBZxDCJtKYoj0xPDj+/5qh6x8J7G838BAUDgVOtoTTG6zlzGk52/z8JlaRrsYnbH0G2Hb3noHxZdu/EDxaOTiKc0cYqnGncFwtQxMrHG6emFGsr1EU0xwsdGST44TXT5AEZPE/rUDENP7OUnr/9bro1YDL78fIzDJaa/fAeHimMUvRq56VkySM57zYuZKecwhUb/OSuJJmKM3L+TZdedQ2qwk/J0Hq8jTWiApinu+Jevv3L/PY+T7m47ZRHMCw4AUpPY5RrZkXGCmo37LJ7iLTVJGHg89LGvfjDT3/HylpX9i0vD08ifPyQ6UGgtMQLbo3DfPjA0Ws5cjJWOU3aqRGcc9GQcJ2OhVUpIKUkv7WF6W47tf/E1ui5ahfj9taxb2ELmuw+TPTBCsCBkw2svR3vtOiZmZzG9Rv1C59pBlFIM3bedRZduwIgLlApxWi3u/PfvvP/A3U88mGjP/EojZJ/XAND0Rg1A8dAEpYlp3ET8WSYYJcXhae77sy9d8pJvfWg4mkkKp1A9fh6SAtkSwz08y+wX7mN2+xHK9SqqO8ngmy+h780XYa3spvqTg0yN5PA9Dz8ICFwP3bTIHZ1EHspRWhClelEbA+f8DsuzLloiwlSTT2F2lohLow8xVNTyZdpWDqAZOk6lRlNfO37dZWbzwY9Obzn0qURLE/HWzK90OPbzGgBqbj5vZsUCogPtGL9gwtlvIu0bllAanh7d/uWfXLX+Xdf9xK3ax8ev6LIx1ey2/aSnfIwVC9Enpxnatp8fvvUfuGSmyNoPvJbkdXkmPnUb+3PDuDpkZ2exXYfLr7qMxEAHlXIWzXGYMusEaYkIa+hTIVYoUPLEFKZXs2ld2Y/yAmoj2fuzRyf+rJYr3m8mYwhNEJxizuMLFgCGZVLOFyhlC1ixCIHvP+t/QwhBtD3Ntht/cke8M/PplW940R/O7h1umAhDYE3Xids63vIeglIR3TRoGuyitLfG1v/7DfouW0/itctZFjNIfPMhDm/bQ3NMsuKSq1j4F9cz6ZeQTogSoHkKzQtORSWgmTpS1wlcj+LQ9O3OaO7fyuPZW4noRJoSjSjl2RgU+bwyAYZBvVyjODJNPJ182g7b3xQEUkoe+9R339e6vP/Fzcv7lpaGpxGeQLTFCZIG2a0j+CmdIAgJ/IBYS4rZ4VH8h4bwVnVSvaCdgbNezcDhPIbUYGkLw34ekbNPfYStaoSkmtXQam6pNmPnZ79uZ0tfdkq1bdQ8pGUgo+avNSDyhQEATVIrV/Fdb87uPTdHbCnASscpDE1x74e+dMk1X/qTI9GWlFnPlrBTIanLFxN57AhbHt1BzVDU6zXGhkfpl030rFjETKmOmK0xbtZRSxq3XJSnMRyFOsXmS1NH0zUCx6M6mf+hV61/tzwy89XAcR0jGUOPWaAkgR+c2Ozyvw0AvudRr9WItqaJZlI812esdawbJH9gbPzRT3776gs/9uY73apNkK1RXZ6m/SMv5oz/SHPgkR1M5kuc3rOMiz/4euz1bQRTs2gIdFcdOygTOPGwbCka6WFN4hRrs5Vs6abKePbffcfdo5mNHkM9ah3vfn6W5HkLACElTtWmWqsRb01jxiK/hT8qaFuzkKFN2+/a++37Pr78NZd8MH9wjGCqzPTCCO1/cy0dB87DmyzRtKSbmV6d7PQMkfB4wuhUzKMeNQkdHztXvr9weOKLXs25GagHro+ZiKBZRiP5Ez77AH/eAkAzdHzbJXtwhML0LHY89tsBnhA45Sr3/eWNf9o82P2StvWLTysencTIucwYOdQiA215B1P1OvqsTyT4uc1XgBQYUbMxW8h2q8WDE1+t58tf9mrOI9WpHNGWNGYyBpX6c/55nrcAkFLiuS5u3UXXDMRvK6+lIJJOUR6d4d6P3HjBdTd+cCzamjLr2TKaL6DoAR7mz6t5GmcJaKZB6PlUxrN3u6X6fzil2o9qM/mcZplY6ThmItpwCn9LR8c+f02AAj8ISAx0kJICKbXf6t9vXtpH/vD47JYv3nb1xj965Z2upRO6pzhVXIBuGY1y7qqdLw/P3FzPlr5Ymy1uNhJRpK5jJKMn0My/TXneAsCIWkwdGWN27xCJTOq/AYECTZNs//Idd0Uzqb9e/65rPlSZzOPXG1NKGvMFNQgVdq7yeG2meFN1Kvdl3/bKSIkRsxplYApC7zdy5P+XmgBNwynXqE4WkD7PGQfwy/yB0A0YeWDnhzs2LM5FW1PvlLq2BCEIHC9fmyneVpvM3VgvVO8M/cbUMSMWmeso/p9xAP3zFgBKKTRdQ7N0NEP7bwEANIo3paFRHJ76fOj55UR3y1pp6LF6tnCkPlv8vp0r7VAI9Ijx3/aUP70p/S05G/PyP1STzt+CeQDMyzwA5mUeAPMyD4B5mQfAvMwDYF7mATAv8wCYl3kAzMs8AOZlHgDzMg+AeZkHwLzMA2Be5gEwL/MAmJcXlvz/AQCyLw6Efl1WKwAAAABJRU5ErkJggg==" class="roll-button"/>
+                        </div>
+                    </div>
 
-						</div>
-						<div id="points-field-twos" class="points-field">
+                </div>
+                <div class="innerframe-menu-column">
+                    <div class="menubutton-container">
+                        <a id="rules-btn" href="https://en.wikipedia.org/wiki/Yahtzee" title="Yahtzee Rules" target="_blank"><div>Rules</div></a>
+                    </div>                    
+                    <div id="menu-button-newgame" class="menubutton-container">
+                        <div>New Game</div>
+                    </div>
+                    <!-- <div class="menubutton-container">
+                        <div>About</div>
+                    </div> -->
+                </div>
+                <div class="innerframe-extramenu-column">
+                    <div class="menubutton-container">
+                        <a href="https://de.linkedin.com/pub/daniel-thomalla/113/b60/a26" title="LinkedIn Profile: Daniel Thomalla" target="_blank" rel="me">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/2000px-LinkedIn_Logo.svg.png" alt="LinkedIn Profile" style="height: 4.5vh; padding:1.2vh; display:block; margin:auto">
+                        </a>
+                    </div>
+                    <div class="menubutton-container">
+                        <a href="https://www.xing.com/profile/Daniel_Thomalla" title="XING Profile: Daniel Thomalla"  target="_blank" rel="me">
+                            <img src="https://corporate.xing.com/build/images/navigation/logo.svg" alt="XING Profile" style="height: 5vh; padding:0.5vh; display:block; margin:auto">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="frame-right">
+                <div class="innerframe-top-fields">
+                    <div class="assign-buttons">
+                        <div id="assign-button-ones" class="assign-button">
+                            Ones
+                        </div>
+                        <div id="assign-button-twos" class="assign-button">
+                            Twos
+                        </div>
+                        <div id="assign-button-threes" class="assign-button">
+                            Threes
+                        </div>
+                        <div id="assign-button-fours" class="assign-button">
+                            Fours
+                        </div>
+                        <div id="assign-button-fives" class="assign-button">
+                            Fives
+                        </div>
+                        <div id="assign-button-sixes" class="assign-button">
+                            Sixes
+                        </div>
+                    </div>
+                    <div class="assigned-points">
+                        <div id="points-field-ones" class="points-field">
 
-						</div>
-						<div id="points-field-threes" class="points-field">
+                        </div>
+                        <div id="points-field-twos" class="points-field">
 
-						</div>
-						<div id="points-field-fours" class="points-field">
+                        </div>
+                        <div id="points-field-threes" class="points-field">
 
-						</div>
-						<div id="points-field-fives" class="points-field">
+                        </div>
+                        <div id="points-field-fours" class="points-field">
 
-						</div>
-						<div id="points-field-sixes" class="points-field">
+                        </div>
+                        <div id="points-field-fives" class="points-field">
 
-						</div>
-					</div>
-					<div class="sum-points">
-						<div class="sum-points-field">
-							<div class="sum-points-field-head">Top Sum</div>
-							<div id="sum-points-top" class="sum-points-field-value"></div>
-						</div>
-						<div class="sum-points-field">
-							<div class="sum-points-field-head">Bonus</br>(Sum >= 63)</div>
-							<div id="sum-points-bonus" class="sum-points-field-value"></div>
-						</div>
-						<div class="sum-points-field">
-							<div class="sum-points-field-head">Top Total</div>
-							<div id="sum-points-top-total" class="sum-points-field-value"></div>
-						</div>
-					</div>
-				</div>
-				<div class="innerframe-bottom-fields">
-					<div class="assign-buttons">
-						<div id="assign-button-threekind" class="assign-button">
-							3 of a kind
-						</div>
-						<div id="assign-button-fourkind" class="assign-button">
-							4 of a kind
-						</div>
-						<div id="assign-button-fullhouse" class="assign-button">
-							Full House
-						</div>
-						<div id="assign-button-smallstr" class="assign-button">
-							S. straight
-						</div>
-						<div id="assign-button-largestr" class="assign-button">
-							L. straight
-						</div>
-						<div id="assign-button-yahtzee" class="assign-button">
-							Yahtzee
-						</div>
-						<div id="assign-button-chance" class="assign-button">
-							Chance
-						</div>
-					</div>
-					<div class="assigned-points">
-						<div id="points-field-threekind" class="points-field">
+                        </div>
+                        <div id="points-field-sixes" class="points-field">
 
-						</div>
-						<div id="points-field-fourkind" class="points-field">
+                        </div>
+                    </div>
+                    <div class="sum-points">
+                        <div class="sum-points-field">
+                            <div class="sum-points-field-head">Top Sum</div>
+                            <div id="sum-points-top" class="sum-points-field-value"></div>
+                        </div>
+                        <div class="sum-points-field">
+                            <div class="sum-points-field-head">Bonus (>=63)</div>
+                            <div id="sum-points-bonus" class="sum-points-field-value"></div>
+                        </div>
+                        <div class="sum-points-field">
+                            <div class="sum-points-field-head">Top Total</div>
+                            <div id="sum-points-top-total" class="sum-points-field-value"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="innerframe-bottom-fields">
+                    <div class="assign-buttons">
+                        <div id="assign-button-threekind" class="assign-button">
+                            3 of a kind
+                        </div>
+                        <div id="assign-button-fourkind" class="assign-button">
+                            4 of a kind
+                        </div>
+                        <div id="assign-button-fullhouse" class="assign-button">
+                            Full House
+                        </div>
+                        <div id="assign-button-smallstr" class="assign-button">
+                            S. straight
+                        </div>
+                        <div id="assign-button-largestr" class="assign-button">
+                            L. straight
+                        </div>
+                        <div id="assign-button-yahtzee" class="assign-button">
+                            Yahtzee
+                        </div>
+                        <div id="assign-button-chance" class="assign-button">
+                            Chance
+                        </div>
+                    </div>
+                    <div class="assigned-points">
+                        <div id="points-field-threekind" class="points-field">
 
-						</div>
-						<div id="points-field-fullhouse" class="points-field">
+                        </div>
+                        <div id="points-field-fourkind" class="points-field">
 
-						</div>
-						<div id="points-field-smallstr" class="points-field">
+                        </div>
+                        <div id="points-field-fullhouse" class="points-field">
 
-						</div>
-						<div id="points-field-largestr" class="points-field">
+                        </div>
+                        <div id="points-field-smallstr" class="points-field">
 
-						</div>
-						<div id="points-field-yahtzee" class="points-field">
+                        </div>
+                        <div id="points-field-largestr" class="points-field">
 
-						</div>
-						<div id="points-field-chance" class="points-field">
+                        </div>
+                        <div id="points-field-yahtzee" class="points-field">
 
-						</div>
-					</div>
-					<div class="sum-points">
-						<div class="sum-points-field">
-							<div class="sum-points-field-head">Bottom Sum</div>
-							<div id="sum-points-bottom" class="sum-points-field-value"></div>
-						</div>
-						<div class="sum-points-field">
-							<div class="sum-points-field-head">Total Points</div>
-							<div id="sum-points-total" class="sum-points-field-value"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
-	<script>initGame() </script>
+                        </div>
+                        <div id="points-field-chance" class="points-field">
+
+                        </div>
+                    </div>
+                    <div class="sum-points">
+                        <div class="sum-points-field">
+                            <div class="sum-points-field-head">Bottom Sum</div>
+                            <div id="sum-points-bottom" class="sum-points-field-value"></div>
+                        </div>
+                        <div class="sum-points-field">
+                            <div class="sum-points-field-head">Total Points</div>
+                            <div id="sum-points-total" class="sum-points-field-value"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>initGame() </script>
 </html>
