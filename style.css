@@ -9,8 +9,6 @@ html, body {
   background-color: lightgrey;
   font-family: sans-serif;
   overflow: hidden;
-  perspective: 60em;
-  perspective-origin: 45% 50%;
 }
 
 #title-bar{
@@ -36,6 +34,8 @@ html, body {
   max-width: 105vh;
   margin: auto;
   background-color: lightgrey;
+  perspective: 60em;
+  perspective-origin: 40% 50%;
 }
 
 #frame-right{
